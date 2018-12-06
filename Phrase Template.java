@@ -18,9 +18,11 @@ public class Phrase
         /* implementation not shown */
         int loc = currentPhrase.indexOf(str);
         int i=1;
-        while(i<=n&&loc!=-1){
-        loc=(currentPhrase.subString(loc+1)).indexOf(str)+loc+1;
+        int a=currentPhrase.subString(loc+1)).indexOf(str);
+        while(i<=n && a!=-1){
+        loc=(currentPhrase.subString(loc+1)).indexOf(str))+loc+1;
         i++;
+        a=currentPhrase.subString(loc+1)).indexOf(str);
         }
         return loc;
     }
