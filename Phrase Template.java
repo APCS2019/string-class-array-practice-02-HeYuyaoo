@@ -26,6 +26,19 @@ public class Phrase
         }
         return loc;
     }
+    {
+        int loc=-1;
+        int count =0;
+        int start=0;
+        int sub=-1;
+        while(currentPhrase.substring(start).indexOf(str)){
+            loc
+            count++;
+            if(count==n){
+                return loc;
+            }
+            start=loc+1;
+                    
 
     /** Modifies the current phrase by replacing the nth occurrence of str with repl.
      *  If the nth occurrence does not exist, the current phrase is unchanged.
