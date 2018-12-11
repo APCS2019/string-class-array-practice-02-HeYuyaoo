@@ -24,6 +24,9 @@ public class Phrase
         i++;
         a=currentPhrase.subString(loc+1)).indexOf(str);
         }
+        if(a!=n){
+            return -1;
+        }
         return loc;
     }
     {
@@ -42,7 +45,22 @@ public class Phrase
         }
         return -1;
     }
-
+    public static int findNthOccurrence(String str, int n)
+    {
+        /* implementation not shown */
+        int index = 0;
+        while(n != 0){
+            int i = currentPhrase.substring(index).indexOf(str);
+            if(i == -1)
+                return -1;
+            else if(n == 1)
+                index =index+i;
+            else
+                index = index+i + 1;
+            n--;
+        }
+        return index;
+    }
     /** Modifies the current phrase by replacing the nth occurrence of str with repl.
      *  If the nth occurrence does not exist, the current phrase is unchanged.
      *  Precondition: str.length() > 0 and n > 0
