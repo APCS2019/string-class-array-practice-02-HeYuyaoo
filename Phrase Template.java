@@ -39,8 +39,9 @@ public class Phrase
             if(count==n){
                 return loc;
             }
-            start=loc+1;
+            
             sub=currentPhrase.substring(start).indexOf(str);
+            start=loc+1;
             loc=loc+sub+1;
         }
         return -1;
